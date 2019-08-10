@@ -44,7 +44,48 @@ function startGame () {
     console.log(blanksAndSuccesses);
 }
 
+function checkLetters(letter) {
+    //Check if letter exists in code
+    console.log(letter);
+    var isLetterInWord = false;
+
+    for (var i =0; i < numBlanks; i++) {
+        if(selectedWord[i] == letter) {
+            isLetterInWord = true;
+        }
+    }
+
+    // Check where in word letter exists, then add to blanksAndSuccesses array:
+
+    if(isLetterInWord) {
+        for (var i = 0; i<numBlanks; i++) {
+            if(selectedWord[i] == letter) {
+                blanksAndSuccesses[i] = letter;
+            }
+        }
+    }
+    //Wrong answer
+    else {
+        wrongLetters.push(letter);
+        numGuesses --
+    }
+}
+
+//Testing and debugging
+console.log(blanksAndSuccesses);
 
 //MAIN PROCESS
 //-----------------------------------------------------
+
+//Initiates the code the first time
 startGame();
+
+//Register keyclicks
+
+document.onkeyup = function(event) {
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    checkLetters(letterGuessed);
+
+    //Testing and debugging
+    console.log(letterGuessed);
+}
