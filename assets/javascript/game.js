@@ -67,12 +67,21 @@ function checkLetters(letter) {
     //Wrong answer
     else {
         wrongLetters.push(letter);
-        numGuesses --
+        guessesLeft--  
+        //!!!!!problem with guessesLeft: keystrokes become undefined when used- narrowed problem down to this spot through sectioning and found typo.
     }
+    //Testing and debugging
+    console.log(blanksAndSuccesses);
 }
 
-//Testing and debugging
-console.log(blanksAndSuccesses);
+function roundComplete(){
+    console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left: " + guessesLeft);
+
+    //Check if user won
+
+    //Check if user lost
+    
+}
 
 //MAIN PROCESS
 //-----------------------------------------------------
@@ -85,6 +94,7 @@ startGame();
 document.onkeyup = function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);
+    roundComplete(); 
 
     //Testing and debugging
     console.log(letterGuessed);
