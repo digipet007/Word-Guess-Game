@@ -68,7 +68,7 @@ function checkLetters(letter) {
     else {
         wrongLetters.push(letter);
         guessesLeft--  
-        //!!!!!problem with guessesLeft: keystrokes become undefined when used- narrowed problem down to this spot through sectioning and found typo.
+        //!!!!!Fixed problem with guessesLeft: keystrokes became undefined when used- narrowed problem down to this spot through sectioning and found typo.
     }
     //Testing and debugging
     console.log(blanksAndSuccesses);
@@ -77,10 +77,32 @@ function checkLetters(letter) {
 function roundComplete(){
     console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left: " + guessesLeft);
 
-    //Check if user won
+    //Update the HTML to reflect the most recent count
+    document.getElementById("numGuesses").innerHTML = guessesLeft;
+    document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
+   document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
 
+    //Check if user won
+    if(lettersInWord.toString() == blanksAndSuccesses.toString()) {
+        winCount++;
+        alert("You won! What a wordsmith!");
+
+        //Update win counter in the HTML
+        document.getElementById("winCounter").innerHTML = winCount;
+
+        startGame();
+    }
     //Check if user lost
-    
+    else if (guessesLeft == 0) {
+        lossCount++
+        alert("You lost!");
+
+        //Update HTML to show loss
+        document.getElementById("lossCounter").innerHTML = lossCount;
+
+        startGame();
+    }
+
 }
 
 //MAIN PROCESS
