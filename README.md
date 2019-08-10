@@ -1,6 +1,6 @@
 # Word Guess Game
 
-This is an animal-themed hangman game. The player is allowed nine incorrect guesses.  On the ninth incorrect guess, the round is over and the player is assigned a new word to guess.  
+This is an animal-themed hangman game. Use the keyboard to enter your letter guesses. The player is allowed nine incorrect guesses.  On the ninth incorrect guess, the round is over and the player is assigned a new word to guess.  
 
 ## Getting Started
 
