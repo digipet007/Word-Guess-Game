@@ -2,32 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viiewport" content="width = device-width, initial-scale = 1">
     <title>Word Guess Game</title>
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  </head>
 <body>
 
     <div class="container">
 
         <div class="jumbotron">
-                <h1>Word Guess Game</h1>
-                <p>Press any key to get started!</p>
+                <h1 class="text-center" id="websiteTitle">Word Guess Game</h1>
+                <h4 class="text-center">Press any key to get started!</h4>
         </div>
-
-        <div class="card" style="width: 100%;">
-                <div class="card-header">
-                  Guess my word
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><h1 id="wordToGuess">_ _ _ _ _ _ _</h1></li>
-                  <li class="list-group-item">Incorrect Guesses: <span id="wrongGuesses"></span></li>
-                  <li class="list-group-item">Guesses left: <span id="numGuesses"></span></li>
-                  <li class="list-group-item">Win Counter: <span id="winCounter"></span></li>
-                  <li class="list-group-item">Loss Counter: <span id="lossCounter"></span></li>
-                </ul>
-              </div>
-
+        <div class="container">
+            <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                      Guess My Word
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><h1 id="wordToGuess">_ _ _ _ _ _ _</h1></li>
+                      <li class="list-group-item">Incorrect Guesses: <span id="wrongGuesses"></span></li>
+                      <li class="list-group-item">Guesses left: <span id="numGuesses"></span></li>
+                      <li class="list-group-item">Win Counter: <span id="winCounter"></span></li>
+                      <li class="list-group-item">Loss Counter: <span id="lossCounter"></span></li>
+                    </ul>
+            </div>
+          </div>
+          </div>
+        </div>
     </div>
 
     <!--link to Javasript-->

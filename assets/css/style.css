@@ -1,0 +1,16 @@
+.jumbotron {
+    background-color: black;
+    color: white;
+    border-color: green;
+    border-style: dashed;
+}
+
+#websiteTitle{
+    font-size: 3em;
+    vertical-align: middle;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+body{
+    background-image: url("../images/leopard.png")
+}
