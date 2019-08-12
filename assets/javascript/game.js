@@ -25,6 +25,8 @@ function startGame () {
     guessesLeft = 9
     wrongLetters = [];
     blanksAndSuccesses = [];
+    document.getElementById("wrongGuesses").innerHTML = (" ");
+    document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
 
     //Populate blanks and successes with right number of blanks.
     for (var i = 0; i <numBlanks; i++){
