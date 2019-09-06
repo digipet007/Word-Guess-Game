@@ -4,7 +4,9 @@ This is an animal-themed hangman game. Use the keyboard to enter your letter gue
 
 ## Getting Started
 
-To use this product, submit a pull request, and open in any browser window. 
+To use this product, submit a pull request, and open the index.html file in any browser window. 
+
+Or simply play online: (https://digipet007.github.io/Word-Guess-Game/)
 
 ## Built With
 
