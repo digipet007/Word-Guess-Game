@@ -37,15 +37,15 @@ function startGame () {
     document.getElementById("lossCounter").innerHTML = lossCount;
 
     //Testing and debugging
-    console.log(selectedWord);
-    console.log(lettersInWord);
-    console.log(numBlanks);
-    console.log(blanksAndSuccesses);
+    // console.log(selectedWord);
+    // console.log(lettersInWord);
+    // console.log(numBlanks);
+    // console.log(blanksAndSuccesses);
 }
 
 function checkLetters(letter) {
     //Check if letter exists in code
-    console.log(letter);
+    // console.log(letter);
     var isLetterInWord = false;
 
     for (var i =0; i < numBlanks; i++) {
@@ -65,14 +65,13 @@ function checkLetters(letter) {
     else {
         wrongLetters.push(letter);
         guessesLeft--  
-        //!!!!!Fixed problem with guessesLeft: keystrokes became undefined when used- narrowed problem down to this spot through sectioning and found typo.
     }
     //Testing and debugging
     console.log(blanksAndSuccesses);
 }
 
 function roundComplete(){
-    console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left: " + guessesLeft);
+    // console.log("Win Count: " + winCount + " | Loss Count: " + lossCount + " | Guesses Left: " + guessesLeft);
     //Update the HTML to reflect the most recent count
     document.getElementById("numGuesses").innerHTML = guessesLeft;
     document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
@@ -102,7 +101,8 @@ startGame();
 document.onkeyup = function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
     checkLetters(letterGuessed);
+    
     roundComplete(); 
     //Testing and debugging
-    console.log(letterGuessed);
+    // console.log(letterGuessed);
 }

@@ -30,7 +30,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Authors
 
-* **Sarah Arnold** --view my portfolio and bio: (https://digipet007.github.io/Bootstrap-Portfolio/)
+* **Sarah Arnold** --view my portfolio and bio: (https://digipet007.github.io/Sarahs-Portfolio/)
 
 ## License
 
